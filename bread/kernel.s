@@ -1,15 +1,23 @@
-bits 32
-section .text
-align 4
-dd 0x1BADB002
-dd 0x00
-dd - (0x1BADB002 + 0x00)
-
-
+section .multiboot_header
+header_start:
+	dd 0x1BADB002
+	dd 0
+	dd 0x100000000 - (0x1BADB002 + 0)
+	dw 0
+	dw 0
+	dd 8
+header_end:
 global start
-extern _Z11kernel_mainv
 
+section .text
+extern _Z11kernel_mainv
+bits 32
 start:
-    cli
+    mov esp, stack_bot
     call _Z11kernel_mainv
+    cli
     hlt
+section .bss
+stack_bot:
+    resb 4096 * 6
+stack_top:
