@@ -1,6 +1,6 @@
 #include "terminal.hpp"
 
-void kernel_main() {
+extern "C++" void kernel_main() {
     bstd::Terminal term;
     term.WriteString("hello, world!");
 }
