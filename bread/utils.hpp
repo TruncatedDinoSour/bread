@@ -5,7 +5,7 @@ using size_t = unsigned int;
 using uint8_t = unsigned char;
 using uint16_t = short unsigned int;
 using storage_t = bstd::uint8_t*;
-enum class Color : bstd::uint8_t { Black = 0, White = 15 };
+enum class Color : bstd::uint8_t { Black = 0, Grey = 7, White = 15 };
 struct ColorInterface {
     Color text;
     Color background;

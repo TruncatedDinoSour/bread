@@ -2,5 +2,5 @@
 
 extern "C++" void kernel_main() {
     bstd::Terminal term;
-    term.WriteString("hello, world!");
+    term.WriteString("hello there");;
 }

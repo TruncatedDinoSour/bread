@@ -12,8 +12,8 @@ class Terminal {
 
    public:
     Terminal(bstd::size_t h = 25, bstd::size_t w = 80,
-             bstd::ColorInterface col = {bstd::Color::Black,
-                                         bstd::Color::White})
+             bstd::ColorInterface col = {bstd::Color::White,
+                                         bstd::Color::Grey})
         : m_Buffer{reinterpret_cast<bstd::uint16_t*>(0xB8000)},
           m_Row{0},
           m_Col{0},
