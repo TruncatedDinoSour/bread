@@ -1,2 +1,2 @@
 # bread
-idk shit abouy OSes so I decided to make a simple one and give up
+idk shit about OSes so I decided to make a simple one and give up
