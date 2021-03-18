@@ -1,3 +1,4 @@
+bits 32
 section .multiboot_header
 header_start:
 	dd 0x1BADB002
@@ -11,7 +12,6 @@ global start
 
 section .text
 extern _Z11kernel_mainv
-bits 32
 start:
     mov esp, stack_bot
     call _Z11kernel_mainv

@@ -17,7 +17,7 @@ public:
         m_Col{0}, m_Height{h}, m_Width{w}, m_Color{col} {
             Clear();
   }
-  void WriteChar(bstd::uint16_t c) {
+  void WriteChar(char c) {
     bstd::size_t idx = m_Row * m_Width + m_Col;
     m_Buffer[idx] = (static_cast<bstd::uint16_t>(c) |
                                                (m_Color.get() << 8));
